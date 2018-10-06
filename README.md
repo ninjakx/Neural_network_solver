@@ -83,5 +83,15 @@ We calculate the partial derivative of the total net input to ![img34](https://l
 
 ![img37](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20net_%7BH21%7D%7D%7B%5Cpartial%20w_%7BH21.H11%7D%7D%20%3D%20H_%7B11%7D%20%3D%200.802184%20%5Cend%7Balign*%7D)
 
+![img38](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BH21.H11%7D%7D%20%3D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20out_%7BH_%7B21%7D%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20out_%7BH_%7B21%7D%7D%7D%7B%5Cpartial%20net_%7BH_%7B21%7D%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20net_%7BH_%7B21%7D%7D%7D%7B%5Cpartial%20w_%7BH21.H11%7D%7D%20%5Cend%7Balign*%7D)
+
+![img39](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BH21.H11%7D%7D%20%3D%20-0.0034377285%20*%200.246368732%20*%200.802184%20%3D%200.0006872264573%20%5Cend%7Balign*%7D)
+
+![img40](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BH21.H11%7D%7D%20%26%3D%20%28%5Csum%5Climits_%7Bo%7D%7B%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20out_%7Bo%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20out_%7Bo%7D%7D%7B%5Cpartial%20net_%7Bo%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20net_%7Bo%7D%7D%7B%5Cpartial%20out_%7BH_%7B21%7D%7D%7D%7D%29%20*%20%5Cfrac%7B%5Cpartial%20out_%7BH_%7B21%7D%7D%7D%7B%5Cpartial%20net_%7BH_%7B21%7D%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20net_%7BH_%7B21%7D%7D%7D%7B%5Cpartial%20w_%7BH21.H11%7D%7D%20%5C%5C%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BH21.H11%7D%7D%20%26%3D%20%28%5Csum%5Climits_%7Bo%7D%7B%5Cdelta_%7Bo%7D%20*%20w_%7Bho%7D%7D%29%20*%20out_%7BH_%7B21%7D%7D%281%20-%20out_%7BH_%7B21%7D%7D%29%20*%20H_%7B11%7D%20%5C%5C%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BH21.H11%7D%7D%20%26%3D%20%5Cdelta_%7BH_%7B21%7D%7DH_%7B11%7D%20%5Cend%7Balign*%7D)
+
+![img41](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20w_%7BH21.H11%7D%5E%7B&plus;%7D%20%3D%20w_%7BH21.H11%7D%20-%20%5Ceta%20*%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BH21.H11%7D%7D%20%3D%200.1%20-%20%280.2%20*%20-0.0006872264573%29%20%3D%200.099862554%20%5Cend%7Balign*%7D)
+
+Similarly all the weights can be find out using the same as given above.
+
 
 
