@@ -96,7 +96,3 @@ We calculate the partial derivative of the total net input to ![img34](https://l
 
 Similarly all the weights can be find out using the same as given above.
 
-
-\begin{equation*}
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-\end{equation*}
