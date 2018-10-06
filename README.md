@@ -12,3 +12,17 @@ C++ program to solve a Neural network.
 ## Calculating the Total Error
 
 ![img3](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20E_%7Btotal%7D%20%26%3D%20%5Csum%20%5Cfrac%7B1%7D%7B2%7D%28target%20-%20output%29%5E%7B2%7D%20%5C%5C%20E_%7Bo1%7D%20%26%3D%20%5Cfrac%7B1%7D%7B2%7D%28target_%7BO1%7D%20-%20out_%7BO1%7D%29%5E%7B2%7D%20%5C%5C%20%26%3D%20%5Cfrac%7B1%7D%7B2%7D%280.6%20-%200.544556%20%29%5E%7B2%7D%20%3D%200.001537%20%5C%5C%20%5Cend%7Balign*%7D)
+
+## The Backwards Pass
+
+### Ouput Layer
+
+![img4](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%3D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20out_%7BO1%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20out_%7BO1%7D%7D%7B%5Cpartial%20net_%7BO1%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20net_%7BO1%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%20%5Cend%7Balign*%7D)
+
+![img5](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20out_%7BO1%7D%7D%20%3D%20-%28target_%7BO1%7D%20-%20out_%7BO1%7D%29%20%3D%20-%280.6%20-%200.544556%29%20%3D%200.055444%20%5Cend%7Balign*%7D)
+
+![img6](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20out_%7BO1%7D%20%26%3D%20%5Cfrac%7B1%7D%7B1&plus;e%5E%7B-net_%7BO1%7D%7D%7D%20%5C%5C%20%5Cfrac%7B%5Cpartial%20out_%7Bo1%7D%7D%7B%5Cpartial%20net_%7Bo1%7D%7D%20%26%3D%20out_%7Bo1%7D%281%20-%20out_%7Bo1%7D%29%20%3D%200.544556%281%20-%200.544556%29%20%3D%200.248014762%20%5Cend%7Balign*%7D)
+
+![img7](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20net_%7BO1%7D%20%26%3D%20w_%7BO1.H21%7D%20*%20out_%7BH21%7D%20&plus;%20w_%7BO1.H22%7D%20*%20out_%7BH22%7D%20%5C%5C%20%5Cfrac%7B%5Cpartial%20net_%7BO1%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%20%26%3D%201%20*%20out_%7BH21%7D%20*%20%28w_%7BO1.H21%7D%29%5E%7B%281%20-%201%29%7D%20&plus;%200%20%3D%20out_%7BH21%7D%20%3D%200.56026%20%5Cend%7Balign*%7D)
+
+
