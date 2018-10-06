@@ -60,8 +60,12 @@ similarly
 
 
 
-And ![img24](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20net_%7BO1%7D%7D%7B%5Cpartial%20out_%7BH1%7D%7D%20%5Cend%7Balign*%7D) is equal to ![img25](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B80%7D%20%5Cbegin%7Balign*%7D%20w_%7BH21.H11%7D%20%5Cend%7Balign*%7D)
+And ![img24](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B80%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20net_%7BO1%7D%7D%7B%5Cpartial%20out_%7BH21%7D%7D%20%5Cend%7Balign*%7D) is equal to ![img25](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B80%7D%20%5Cbegin%7Balign*%7D%20w_%7BH21.H11%7D%20%5Cend%7Balign*%7D)
 
+
+![img25](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cbegin%7Balign*%7D%20net_%7BO1%7D%20%3D%20w_%7BO1.H21%7D%20*%20out_%7BH21%7D%20&plus;%20w_%7BO1.H22%7D%20*%20out_%7BH22%7D%20%5Cend%7Balign*%7D)
+
+![img26](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20net_%7BO1%7D%7D%7B%5Cpartial%20out_%7BH21%7D%7D%20%3D%20w_%7BO1.H21%7D%20%3D%20-0.25%20%5Cend%7Balign*%7D)
 
 
 
