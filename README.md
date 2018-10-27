@@ -49,6 +49,8 @@ Finally, we determine how much does the total net input of O<sub>1</sub> change 
 
 ![img7](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20net_%7BO1%7D%20%26%3D%20w_%7BO1.H21%7D%20*%20out_%7BH21%7D%20&plus;%20w_%7BO1.H22%7D%20*%20out_%7BH22%7D%20%5C%5C%20%5Cfrac%7B%5Cpartial%20net_%7BO1%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%20%26%3D%201%20*%20out_%7BH21%7D%20*%20%28w_%7BO1.H21%7D%29%5E%7B%281%20-%201%29%7D%20&plus;%200%20%3D%20out_%7BH21%7D%20%3D%200.56026%20%5Cend%7Balign*%7D)
 
+Putting it all together:
+
 ![img8](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%20%26%3D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20out_%7BO1%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20out_%7BO1%7D%7D%7B%5Cpartial%20net_%7BO1%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20net_%7BO1%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%20%5C%5C%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%20%26%3D%200.055444%20*%200.248014762%20*%200.56026%20%3D%200.007704096302%20%5Cend%7Balign*%7D)
 
 ![img9](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%20%3D%20-%28target_%7BO1%7D%20-%20out_%7BO1%7D%29%20*%20out_%7BO1%7D%281%20-%20out_%7BO1%7D%29%20*%20out_%7BH21%7D%20%5Cend%7Balign*%7D)
@@ -75,6 +77,9 @@ similarly
 ![img19](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20w_%7BO1.H22%7D%5E%7B&plus;%7D%20%3D%200.501753%20%5Cend%7Balign*%7D)
 
 ### Hidden Layer
+
+We want to know how much a change in W<sub>H<sub>21</sub>.H<sub>11</sub></sub> affects the total error.
+We use the same process but there will be a slight difference that here we will consider the effect of output neurons as output of each hidden layer neuron contributes to the output (and therefore error).
 
 ![img20](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BH21.H11%7D%7D%20%3D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20out_%7BH21%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20out_%7BH21%7D%7D%7B%5Cpartial%20net_%7BH21%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20net_%7BH21%7D%7D%7B%5Cpartial%20w_%7BH21.H11%7D%7D%20%5Cend%7Balign*%7D%20%20%20)
 
@@ -119,3 +124,4 @@ We calculate the partial derivative of the total net input to ![img34](https://l
 
 Similarly all the weights can be find out using the same as given above.
 
+After updating the weights we can see loss has been minimised. Originally it was 0.0317292 but it reduces to 0.0314531 after applying backpropogation. 
