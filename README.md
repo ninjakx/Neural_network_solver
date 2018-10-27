@@ -20,15 +20,17 @@ We then squash it using the logistic function to get the output of H<sub>11</sub
 
 ## Calculating the Total Error
 
-Consider W<sub>O<sub>1</sub>.H<sub>21</sub></sub>. We want to know how much a change in W<sub>O<sub>1</sub>.H<sub>21</sub></sub> affects the total error, aka ![img04](https://latex.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BO_1.H_%7B21%7D%7D%7D)
-
+We calculate the error for each output neuron using the squared error function and sum them to get the total error:
 
 ![img3](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20E_%7Btotal%7D%20%26%3D%20%5Csum%20%5Cfrac%7B1%7D%7B2%7D%28target%20-%20output%29%5E%7B2%7D%20%5C%5C%20E_%7Bo1%7D%20%26%3D%20%5Cfrac%7B1%7D%7B2%7D%28target_%7BO1%7D%20-%20out_%7BO1%7D%29%5E%7B2%7D%20%5C%5C%20%26%3D%20%5Cfrac%7B1%7D%7B2%7D%280.6%20-%200.544556%20%29%5E%7B2%7D%20%3D%200.001537%20%5C%5C%20%5Cend%7Balign*%7D)
 
 ## The Backwards Pass
 
+We use backpropogation to update the weights in order to make the predicted output closer to the desired/target output, thereby minimizing the error for each output neuron and the network as a whole. 
+
 ### Ouput Layer
-Some sources extract the negative sign from \delta so it would be written as:
+
+Consider W<sub>O<sub>1</sub>.H<sub>21</sub></sub>. We want to know how much a change in W<sub>O<sub>1</sub>.H<sub>21</sub></sub> affects the total error, aka ![img04](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BO_1.H_%7B21%7D%7D%7D)
 
 ![img4](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%3D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20out_%7BO1%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20out_%7BO1%7D%7D%7B%5Cpartial%20net_%7BO1%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20net_%7BO1%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%20%5Cend%7Balign*%7D)
 
@@ -49,9 +51,11 @@ Alternatively, we have ![img10](https://latex.codecogs.com/gif.latex?%5Cinline%2
 ![img15](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cdelta_%7BO1%7D%20%3D%20-%28target_%7BO1%7D%20-%20out_%7BO1%7D%29%20*%20out_%7BO1%7D%281%20-%20out_%7BO1%7D%29%20%5Cend%7Balign*%7D)
 
 Therefore:
+
 ![img16](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%20%3D%20%5Cdelta_%7BO1%7D%20out_%7BH21%7D%20%5Cend%7Balign*%7D)
 
 Some sources extract the negative sign from \delta so it would be written as:
+
 ![img17](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%20%3D%20-%5Cdelta_%7BO1%7D%20out_%7BH21%7D%20%5Cend%7Balign*%7D)
 
 To decrease the error, we then subtract this value from the current weight (optionally multiplied by some learning rate, eta, which we’ll set to 0.2):
