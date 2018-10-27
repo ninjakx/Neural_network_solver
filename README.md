@@ -13,7 +13,7 @@ The net input for H<sub>11</sub> can be calculated as below followed by squashin
 
 ![img1](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20net_%7BH11%7D%20%26%3D%20%28w_%7BH11.I1%7D%20*%20I_1%29%20&plus;%20%28w_%7BH11.I2%7D%20*%20I_2%29%20&plus;%20%28w_%7BH11.I3%7D%20*%20I_3%29%20&plus;%20%28w_%7BH11.I4%7D%20*%20I_4%29%5C%5C%20%26%20%3D%20%280.5%20*%201%29%20&plus;%20%280.4%20*%202%29%20&plus;%20%28%200.1%20*%20-1%29%20&plus;%20%280.2%20*%201%29%20%5C%5C%20%26%20%3D%201.4%20%5C%5C%20%5C%5C%20out_%7BH11%7D%20%26%3D%20%5Cfrac%7B1%7D%7B1&plus;e%5E%7B-net_%7BH11%7D%7D%7D%20%5C%5C%20%26%20%3D%20%5Cfrac%7B1%7D%7B1&plus;e%5E%7B-1.4%7D%7D%20%5C%5C%20%26%20%3D%200.802184%20%5C%5C%20%5C%5C%20net_%7BH12%7D%20%26%3D%20%28w_%7BH12.I1%7D%20*%20I_1%29%20&plus;%20%28w_%7BH12.I2%7D%20*%20I_2%29%20&plus;%20%28w_%7BH12.I3%7D%20*%20I_3%29%20&plus;%20%28w_%7BH12.I4%7D%20*%20I_4%29%5C%5C%20%26%20%3D%20%280.65%20*%201%29%20&plus;%20%280.15%20*%202%29%20&plus;%20%28%200.2%20*%20-1%29%20&plus;%20%280.7%20*%201%29%20%5C%5C%20%26%20%3D%201.45%20%5C%5C%20%5C%5C%20out_%7BH12%7D%20%26%20%3D%20%5Cfrac%7B1%7D%7B1&plus;e%5E%7B-net_%7BH12%7D%7D%7D%20%5C%5C%20%26%20%3D%20%5Cfrac%7B1%7D%7B1&plus;e%5E%7B-1.45%7D%7D%20%5C%5C%20%26%20%3D%200.80998%20%5C%5C%20%5C%5C%20%5Cend%7Balign*%7D)
 
-Now the output of first hidden layer serve as inputs for the second hidden layer. We perform the same procedure to find out the output at the nodes of second hidden layer.
+Now the output at the nodes of first hidden layer serve as a input for the second hidden layer. We perform the same procedure to find out the output at the nodes of second hidden layer which in turn determines the value at the output node.
 
 ![img2](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20net_%7BH21%7D%20%26%3D%20%28w_%7BH21.H11%7D%20*%20H_%7B11%7D%29%20&plus;%20%28w_%7BH21.H12%7D%20*%20H_%7B12%7D%29%20%5C%5C%20%26%20%3D%20%280.1%20*%200.802184%29%20&plus;%20%280.2%20*%200.80998%29%20%5C%5C%20%26%20%3D%200.43%20%5C%5C%20%5C%5C%20out_%7BH21%7D%20%26%20%3D%20%5Cfrac%7B1%7D%7B1&plus;e%5E%7B-net_%7BH21%7D%7D%7D%20%5C%5C%20%26%20%3D%20%5Cfrac%7B1%7D%7B1&plus;e%5E%7B-0.43%7D%7D%20%5C%5C%20%26%20%3D%200.80998%20%5C%5C%20%5C%5C%20net_%7BH22%7D%20%26%3D%20%28w_%7BH22.H11%7D%20*%20H_%7B11%7D%29%20&plus;%20%28w_%7BH22.H12%7D%20*%20H_%7B12%7D%29%5C%5C%20%26%20%3D%20%280.3%20*%200.802184%29%20&plus;%20%280.4%20*%200.80998%29%20%5C%5C%20%26%20%3D%201%20%5C%5C%20%5C%5C%20out_%7BH22%7D%20%26%20%3D%20%5Cfrac%7B1%7D%7B1&plus;e%5E%7B-net_%7BH22%7D%7D%7D%20%5C%5C%20%26%20%3D%20%5Cfrac%7B1%7D%7B1&plus;e%5E%7B-1%7D%7D%20%5C%5C%20%26%20%3D%200.637529%20%5C%5C%20%5C%5C%20net_%7BO1%7D%20%26%3D%20%28w_%7BO1.H21%7D%20*%20H_%7B21%7D%29%20&plus;%20%28w_%7BO1.H22%7D%20*%20H_%7B22%7D%29%20%5C%5C%20%26%20%3D%20%28-0.25%20*%200.56026%29%20&plus;%20%280.5%20*%200.637529%29%20%5C%5C%20%26%20%3D%200.17%20%5C%5C%20%5C%5C%20out_%7BO1%7D%20%26%3D%20%5Cfrac%7B1%7D%7B1&plus;e%5E%7B-net_%7BO1%7D%7D%7D%20%5C%5C%20%26%20%3D%20%5Cfrac%7B1%7D%7B1&plus;e%5E%7B0.17%7D%7D%20%5C%5C%20%26%20%3D%200.544556%20%5C%5C%20%5C%5C%20%5Cend%7Balign*%7D)
 
@@ -32,11 +32,20 @@ We use backpropogation to update the weights in order to make the predicted outp
 
 Consider W<sub>O<sub>1</sub>.H<sub>21</sub></sub>. We want to know how much a change in W<sub>O<sub>1</sub>.H<sub>21</sub></sub> affects the total error, aka ![img04](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BO_1.H_%7B21%7D%7D%7D)
 
+By applying the chain rule we know that:
+
 ![img4](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%3D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20out_%7BO1%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20out_%7BO1%7D%7D%7B%5Cpartial%20net_%7BO1%7D%7D%20*%20%5Cfrac%7B%5Cpartial%20net_%7BO1%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%20%5Cend%7Balign*%7D)
+
+We first determine how much does the total error change with respect to the output.
 
 ![img5](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%20E_%7Btotal%7D%7D%7B%5Cpartial%20out_%7BO1%7D%7D%20%3D%20-%28target_%7BO1%7D%20-%20out_%7BO1%7D%29%20%3D%20-%280.6%20-%200.544556%29%20%3D%200.055444%20%5Cend%7Balign*%7D)
 
+Then we determine how much does the output of O<sub>1</sub> change with respect to its total net input.
+For that, first we calculate the partial derivative of the logistic function which is the output multiplied by 1 minus the output.
+
 ![img6](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20out_%7BO1%7D%20%26%3D%20%5Cfrac%7B1%7D%7B1&plus;e%5E%7B-net_%7BO1%7D%7D%7D%20%5C%5C%20%5Cfrac%7B%5Cpartial%20out_%7Bo1%7D%7D%7B%5Cpartial%20net_%7Bo1%7D%7D%20%26%3D%20out_%7Bo1%7D%281%20-%20out_%7Bo1%7D%29%20%3D%200.544556%281%20-%200.544556%29%20%3D%200.248014762%20%5Cend%7Balign*%7D)
+
+Finally, we determine how much does the total net input of O<sub>1</sub> change with respect to W<sub>O<sub>1</sub>.H<sub>21</sub></sub>.
 
 ![img7](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Cbegin%7Balign*%7D%20net_%7BO1%7D%20%26%3D%20w_%7BO1.H21%7D%20*%20out_%7BH21%7D%20&plus;%20w_%7BO1.H22%7D%20*%20out_%7BH22%7D%20%5C%5C%20%5Cfrac%7B%5Cpartial%20net_%7BO1%7D%7D%7B%5Cpartial%20w_%7BO1.H21%7D%7D%20%26%3D%201%20*%20out_%7BH21%7D%20*%20%28w_%7BO1.H21%7D%29%5E%7B%281%20-%201%29%7D%20&plus;%200%20%3D%20out_%7BH21%7D%20%3D%200.56026%20%5Cend%7Balign*%7D)
 
